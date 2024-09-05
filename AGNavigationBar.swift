@@ -161,6 +161,17 @@ public class AGNavigationBar: UIView {
         }
     }
     
+    /// Set the back action is hidden, default is false
+    public var isBackHidden: Bool = false {
+        didSet {
+            guard !oldValue, isBackHidden else {
+                return
+            }
+            let action = actions[0]
+            action.isHidden = true
+        }
+    }
+    
     
     
     // MARK: - Private Properties

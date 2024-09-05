@@ -31,7 +31,7 @@ class ViewController: BaseViewController {
         })
         navBar.addAction(action)
         navBar.actionTintColor = .black
-        
+        navBar.isBackHidden = true
     }
 
     override func didReceiveMemoryWarning() {
