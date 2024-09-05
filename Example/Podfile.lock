@@ -1,0 +1,16 @@
+PODS:
+  - AGNavigationBar (0.1.0)
+
+DEPENDENCIES:
+  - AGNavigationBar (from `../`)
+
+EXTERNAL SOURCES:
+  AGNavigationBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AGNavigationBar: d19064afdf5fa2db0b4ba82737f2dbaf5e688c7b
+
+PODFILE CHECKSUM: 43f764bd08f245c86f7d9c238b9b4cb9974b881f
+
+COCOAPODS: 1.15.2
