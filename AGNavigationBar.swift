@@ -237,6 +237,7 @@ public class AGNavigationBar: UIView {
     private let titleView: UIView = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
+        lbl.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         return lbl
     }()
     
@@ -270,9 +271,11 @@ public class AGNavigationBar: UIView {
             rightStackView.rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -Config.actionEdgeMargin),
             rightStackView.heightAnchor.constraint(equalTo: containerView.heightAnchor),
             
-            titleView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor),
+            titleView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).fitPriority(.defaultLow),
             titleView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
             titleView.heightAnchor.constraint(equalTo: containerView.heightAnchor),
+            titleView.leftAnchor.constraint(greaterThanOrEqualTo: leftStackView.rightAnchor, constant: 10).fitPriority(.defaultHigh),
+            titleView.rightAnchor.constraint(lessThanOrEqualTo: rightStackView.leftAnchor, constant: -10).fitPriority(.defaultHigh),
         ])
         
         // default add back action
@@ -386,5 +389,13 @@ extension UIImage {
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return newImage
+    }
+}
+
+extension NSLayoutConstraint {
+    
+    fileprivate func fitPriority(_ prity: UILayoutPriority) -> Self {
+        priority = prity
+        return self
     }
 }
