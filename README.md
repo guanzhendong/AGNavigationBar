@@ -16,15 +16,26 @@
 ### BackgroundImage
 
 <img src="./Screenshot/3.png" alt="3" style="zoom:25%;" />
+
 ### AttributesTitle
 
 <img src="./Screenshot/4.png" alt="4" style="zoom:25%;" />
+
 ### BarAction
 
 <img src="./Screenshot/5.png" alt="5" style="zoom:25%;" />
+
+### ChangeAction
+
+![7](./Screenshot/7.gif)
+
 ### LongTitle
 
 <img src="./Screenshot/6.png" alt="6" style="zoom:25%;" />
+
+### ChangeAlpha
+
+![8](./Screenshot/8.gif)
 
 ## Example
 
