@@ -22,7 +22,7 @@ pod 'AGNavigationBar'
 
 ## Author
 
-arthurguan, arthurguan@webank.com
+arthurguan, cgrect@126.com
 
 ## License
 
