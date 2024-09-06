@@ -19,6 +19,7 @@
 		29C44C162C89AF6900465596 /* TitleTextAttributesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C44C152C89AF6900465596 /* TitleTextAttributesViewController.swift */; };
 		29C44C182C89B2FE00465596 /* BarActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C44C172C89B2FE00465596 /* BarActionViewController.swift */; };
 		29C44C1A2C89B55F00465596 /* ChangeBarActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C44C192C89B55E00465596 /* ChangeBarActionViewController.swift */; };
+		29C44C1C2C8AE5F600465596 /* LongTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C44C1B2C8AE5F600465596 /* LongTitleViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -51,6 +52,7 @@
 		29C44C152C89AF6900465596 /* TitleTextAttributesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextAttributesViewController.swift; sourceTree = "<group>"; };
 		29C44C172C89B2FE00465596 /* BarActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarActionViewController.swift; sourceTree = "<group>"; };
 		29C44C192C89B55E00465596 /* ChangeBarActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeBarActionViewController.swift; sourceTree = "<group>"; };
+		29C44C1B2C8AE5F600465596 /* LongTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongTitleViewController.swift; sourceTree = "<group>"; };
 		306EF87C40EDD20BC6BBCB71 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		387682FCC5865A62DDA0CB58 /* Pods_AGNavigationBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AGNavigationBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* AGNavigationBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AGNavigationBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +135,7 @@
 				29C44C152C89AF6900465596 /* TitleTextAttributesViewController.swift */,
 				29C44C172C89B2FE00465596 /* BarActionViewController.swift */,
 				29C44C192C89B55E00465596 /* ChangeBarActionViewController.swift */,
+				29C44C1B2C8AE5F600465596 /* LongTitleViewController.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				29517C852C4E3F2500C3580D /* SecondViewController.swift */,
 				2913BCAA2C85917F00946D47 /* ThirdViewController.swift */,
@@ -364,6 +367,7 @@
 			files = (
 				29C44C182C89B2FE00465596 /* BarActionViewController.swift in Sources */,
 				29517C862C4E3F2500C3580D /* SecondViewController.swift in Sources */,
+				29C44C1C2C8AE5F600465596 /* LongTitleViewController.swift in Sources */,
 				29C44C1A2C89B55F00465596 /* ChangeBarActionViewController.swift in Sources */,
 				29C44C162C89AF6900465596 /* TitleTextAttributesViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
