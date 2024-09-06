@@ -346,6 +346,7 @@ public class AGNavigationBar: UIView {
     
     private func changeButtonColor(_ button: UIButton) {
         button.setTitleColor(actionTintColor, for: .normal)
+        button.setTitleColor(actionTintColor.withAlphaComponent(0.5), for: .disabled)
         
         guard let img = button.image(for: .normal) else { 
             return

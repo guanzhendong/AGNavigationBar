@@ -16,7 +16,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        AGNavigationBar.Config.barTintColor = .orange
+        AGNavigationBar.Config.barTintColor = .init(red: 111/256, green: 200/256, blue: 156/256, alpha: 1)
 //        AGNavigationBar.Config.backgroundImage = UIImage(named: "bg")
         AGNavigationBar.Config.backImage = "navi_back"
         AGNavigationBar.Config.backActionHandler = { _ in
