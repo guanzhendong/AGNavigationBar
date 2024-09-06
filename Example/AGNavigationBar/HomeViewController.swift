@@ -17,6 +17,7 @@ class HomeViewController: UITableViewController {
         "设置导航按钮",
         "改变导航按钮（标题、图片、是否可用、是否隐藏）",
         "设置超长的标题",
+        "设置颜色透明度（跟随滚动）",
     ]
     
 
@@ -71,6 +72,8 @@ class HomeViewController: UITableViewController {
             navigationController?.pushViewController(ChangeBarActionViewController(), animated: true)
         case 5:
             navigationController?.pushViewController(LongTitleViewController(), animated: true)
+        case 6:
+            navigationController?.pushViewController(ChangeAlphaViewController(), animated: true)
         default:
             break
         }

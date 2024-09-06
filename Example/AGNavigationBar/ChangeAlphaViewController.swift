@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.swift
+//  ChangeAlphaViewController.swift
 //  AGNavigationBar_Example
 //
 //  Created by arthurguan on 2024/9/2.
@@ -9,9 +9,11 @@
 import UIKit
 import AGNavigationBar
 
-class ThirdViewController: BaseViewController {
+class ChangeAlphaViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var lastAlpha: CGFloat = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,7 @@ class ThirdViewController: BaseViewController {
     override func confitNavBar() {
         super.confitNavBar()
         
-        navBar.title = "设置"
+        navBar.title = "颜色透明度（跟随滚动）"
         navBar.barTintColor = .blue
         navBar.addAction(AGNavigationBarAction(title: "保存", position: .right, handler: { action in
         }))
@@ -32,7 +34,7 @@ class ThirdViewController: BaseViewController {
     
 }
 
-extension ThirdViewController: UITableViewDataSource, UITableViewDelegate {
+extension ChangeAlphaViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         30
@@ -48,5 +50,19 @@ extension ThirdViewController: UITableViewDataSource, UITableViewDelegate {
         let alpha = 1 - offsetY / 200
         navBar.barTintColor = .blue.withAlphaComponent(alpha)
         
+        if lastAlpha > alpha, alpha < 0.2 {
+            navBar.actionTintColor = .black
+            navBar.titleTextAttributes = [
+                .foregroundColor: UIColor.black,
+                .font: UIFont.systemFont(ofSize: 18, weight: .medium)
+            ]
+        } else if lastAlpha < alpha, alpha > 0.2 {
+            navBar.actionTintColor = .white
+            navBar.titleTextAttributes = [
+                .foregroundColor: UIColor.white,
+                .font: UIFont.systemFont(ofSize: 18, weight: .medium)
+            ]
+        }
+        lastAlpha = alpha
     }
 }
