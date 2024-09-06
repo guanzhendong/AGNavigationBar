@@ -8,15 +8,22 @@
 ## Screenshot
 ### Home
 <img src="./Screenshot/1.png" alt="1" style="zoom:25%;" />
+
 ### BackgroundColor
+
 <img src="./Screenshot/2.png" alt="2" style="zoom:25%;" />
+
 ### BackgroundImage
+
 <img src="./Screenshot/3.png" alt="3" style="zoom:25%;" />
 ### AttributesTitle
+
 <img src="./Screenshot/4.png" alt="4" style="zoom:25%;" />
 ### BarAction
+
 <img src="./Screenshot/5.png" alt="5" style="zoom:25%;" />
 ### LongTitle
+
 <img src="./Screenshot/6.png" alt="6" style="zoom:25%;" />
 
 ## Example
