@@ -1,10 +1,13 @@
 # AGNavigationBar
 
 [![Version](https://img.shields.io/cocoapods/v/AGNavigationBar.svg?style=flat)](https://cocoapods.org/pods/AGNavigationBar)
-[![License](https://img.shields.io/cocoapods/l/AGNavigationBar.svg?style=flat)](LICENSE)
-[![Platform](https://img.shields.io/cocoapods/p/AGNavigationBar.svg?style=flat)](https://www.apple.com/nl/ios/)
+[![](https://img.shields.io/cocoapods/l/AGNavigationBar.svg?style=flat)](LICENSE)
+[![](https://img.shields.io/badge/support-iOS11%2B-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
+[![](https://img.shields.io/badge/language-Swift-f48041.svg?style=flat)](https://www.apple.com/)
+
 
 ## Screenshot
+
 ### Home
 <img src="./Screenshot/1.png" alt="1" style="zoom:25%;" />
 
