@@ -1,9 +1,8 @@
 # AGNavigationBar
 
-[![CI Status](https://img.shields.io/travis/arthurguan/AGNavigationBar.svg?style=flat)](https://travis-ci.org/arthurguan/AGNavigationBar)
 [![Version](https://img.shields.io/cocoapods/v/AGNavigationBar.svg?style=flat)](https://cocoapods.org/pods/AGNavigationBar)
-[![License](https://img.shields.io/cocoapods/l/AGNavigationBar.svg?style=flat)](https://cocoapods.org/pods/AGNavigationBar)
-[![Platform](https://img.shields.io/cocoapods/p/AGNavigationBar.svg?style=flat)](https://cocoapods.org/pods/AGNavigationBar)
+[![License](https://img.shields.io/cocoapods/l/AGNavigationBar.svg?style=flat)](LICENSE)
+[![Platform](https://img.shields.io/cocoapods/p/AGNavigationBar.svg?style=flat)](https://www.apple.com/nl/ios/)
 
 ## Screenshot
 ### Home
