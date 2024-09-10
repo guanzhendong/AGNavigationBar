@@ -210,6 +210,7 @@ public class AGNavigationBar: UIView {
     /// Container view where you put your custom view
     private let containerView: UIView = {
         let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -265,6 +266,11 @@ public class AGNavigationBar: UIView {
         containerView.addSubview(titleView)
         
         NSLayoutConstraint.activate([
+            containerView.leftAnchor.constraint(equalTo: leftAnchor),
+            containerView.rightAnchor.constraint(equalTo: rightAnchor),
+            containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            containerView.heightAnchor.constraint(equalToConstant: 44.0),
+            
             leftStackView.leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: Config.actionEdgeMargin),
             leftStackView.heightAnchor.constraint(equalTo: containerView.heightAnchor),
             
@@ -293,12 +299,6 @@ public class AGNavigationBar: UIView {
         
         visualEffectView.frame = bounds
         backgroundImageView.frame = bounds
-        
-        var safeAreaTop: CGFloat = 20.0
-        if #available(iOS 11, *) {
-            safeAreaTop = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 44.0
-        }
-        containerView.frame = CGRect(x: 0, y: safeAreaTop, width: bounds.width, height: bounds.height - safeAreaTop)
         
         let lineHeight = 1 / UIScreen.main.scale
         shadowImageView.frame = CGRect(x: 0,
