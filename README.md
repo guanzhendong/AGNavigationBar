@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/cocoapods/v/AGNavigationBar.svg?style=flat)](https://cocoapods.org/pods/AGNavigationBar)
 [![](https://img.shields.io/cocoapods/l/AGNavigationBar.svg?style=flat)](LICENSE)
-[![](https://img.shields.io/badge/support-iOS11%2B-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
+[![](https://img.shields.io/badge/support-iOS10%2B-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
 [![](https://img.shields.io/badge/language-Swift-f48041.svg?style=flat)](https://www.apple.com/)
 
 
@@ -92,14 +92,22 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+- iOS 10.0
+- Swift 5.0
+
 ## Installation
 
-AGNavigationBar is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### CocoaPods
+
+AGNavigationBar is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'AGNavigationBar'
 ```
+
+### Manual
+
+Drop the swift files  [AGNavigationBar.swift](./AGNavigationBar/Classes/AGNavigationBar.swift)  into your project.
 
 ## Usage
 
