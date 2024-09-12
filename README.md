@@ -8,32 +8,79 @@
 
 ## Screenshot
 
-### Home
-<img src="./Screenshot/1.png" alt="1" style="zoom:25%;" />
+### Demo
+![1](./Screenshot/1.png)
 
 ### BackgroundColor
 
-<img src="./Screenshot/2.png" alt="2" style="zoom:25%;" />
+```swift
+navBar.barTintColor = .green
+```
+
+![2](./Screenshot/2.png)
 
 ### BackgroundImage
 
-<img src="./Screenshot/3.png" alt="3" style="zoom:25%;" />
+```swift
+AGNavigationBar.Config.backgroundImage = UIImage(named: "bg")
+```
+
+![3](./Screenshot/3.png)
 
 ### AttributesTitle
 
-<img src="./Screenshot/4.png" alt="4" style="zoom:25%;" />
+```swift
+navBar.titleTextAttributes = [
+    .foregroundColor: UIColor.blue,
+    .font: UIFont.systemFont(ofSize: 26, weight: .medium)
+]
+```
 
-### BarAction
-
-<img src="./Screenshot/5.png" alt="5" style="zoom:25%;" />
-
-### ChangeAction
-
-![7](./Screenshot/7.gif)
+![4](./Screenshot/4.png)
 
 ### LongTitle
 
-<img src="./Screenshot/6.png" alt="6" style="zoom:25%;" />
+No additional setup required
+
+![6](./Screenshot/6.png)
+
+### BarAction
+
+```swift
+navBar.addAction(AGNavigationBarAction(title: "保存", position: .left))
+navBar.addAction(AGNavigationBarAction(image: "add", position: .right, handler: { _ in
+
+}))
+
+navBar.actionTintColor = .yellow
+```
+
+![5](./Screenshot/5.png)
+
+### ChangeAction
+
+```swift
+navBar.addAction(AGNavigationBarAction(title: "保存", position: .right, handler: { action in
+    action.title = "😁"
+}))
+navBar.addAction(AGNavigationBarAction(title: "朋友圈", position: .right, handler: { action in
+    print("朋友圈")
+    action.isHidden = true
+}))
+navBar.addAction(AGNavigationBarAction(title: "关闭", position: .left, handler: { action in
+    action.isEnabled = false
+}))
+```
+
+![7](./Screenshot/7.gif)
+
+### HideBackAction
+
+```
+navBar.isBackHidden = true
+```
+
+![9](./Screenshot/9.png)
 
 ### ChangeAlpha
 
