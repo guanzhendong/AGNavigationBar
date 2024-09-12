@@ -47,9 +47,11 @@ No additional setup required
 ### BarAction
 
 ```swift
-navBar.addAction(AGNavigationBarAction(title: "保存", position: .left))
-navBar.addAction(AGNavigationBarAction(image: "add", position: .right, handler: { _ in
-
+navBar.addAction(AGNavigationBarAction(title: "保存", position: .right))
+navBar.addAction(AGNavigationBarAction(title: "朋友圈", position: .right, handler: { _ in
+    print("朋友圈")
+}))
+navBar.addAction(AGNavigationBarAction(title: "关闭", position: .left, handler: { _ in
 }))
 
 navBar.actionTintColor = .yellow
@@ -107,7 +109,7 @@ pod 'AGNavigationBar'
 
 ### Manual
 
-Drop the swift files  [AGNavigationBar.swift](./AGNavigationBar/Classes/AGNavigationBar.swift)  into your project.
+Drop the swift files  [AGNavigationBar.swift](AGNavigationBar/Classes/AGNavigationBar.swift)  into your project.
 
 ## Usage
 
