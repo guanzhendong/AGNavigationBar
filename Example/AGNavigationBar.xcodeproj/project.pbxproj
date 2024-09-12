@@ -12,6 +12,7 @@
 		2913BCAD2C85917F00946D47 /* ChangeAlphaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2913BCAA2C85917F00946D47 /* ChangeAlphaViewController.swift */; };
 		29517C842C4E3DF000C3580D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29517C832C4E3DF000C3580D /* BaseViewController.swift */; };
 		29517C882C4E43B500C3580D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29517C872C4E43B500C3580D /* BaseNavigationController.swift */; };
+		298D6D3C2C92883600B460F8 /* HideBackActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298D6D3B2C92883600B460F8 /* HideBackActionViewController.swift */; };
 		29C44C102C89A8C800465596 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C44C0F2C89A8C800465596 /* HomeViewController.swift */; };
 		29C44C122C89AC1F00465596 /* BackgroundColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C44C112C89AC1F00465596 /* BackgroundColorViewController.swift */; };
 		29C44C142C89AD0200465596 /* BackgroundImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C44C132C89AD0200465596 /* BackgroundImageViewController.swift */; };
@@ -43,6 +44,7 @@
 		2913BCAB2C85917F00946D47 /* ChangeAlphaViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeAlphaViewController.xib; sourceTree = "<group>"; };
 		29517C832C4E3DF000C3580D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		29517C872C4E43B500C3580D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		298D6D3B2C92883600B460F8 /* HideBackActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideBackActionViewController.swift; sourceTree = "<group>"; };
 		29C44C0F2C89A8C800465596 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		29C44C112C89AC1F00465596 /* BackgroundColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorViewController.swift; sourceTree = "<group>"; };
 		29C44C132C89AD0200465596 /* BackgroundImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				29C44C152C89AF6900465596 /* TitleTextAttributesViewController.swift */,
 				29C44C172C89B2FE00465596 /* BarActionViewController.swift */,
 				29C44C192C89B55E00465596 /* ChangeBarActionViewController.swift */,
+				298D6D3B2C92883600B460F8 /* HideBackActionViewController.swift */,
 				29C44C1B2C8AE5F600465596 /* LongTitleViewController.swift */,
 				2913BCAA2C85917F00946D47 /* ChangeAlphaViewController.swift */,
 				2913BCAB2C85917F00946D47 /* ChangeAlphaViewController.xib */,
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29C44C182C89B2FE00465596 /* BarActionViewController.swift in Sources */,
+				298D6D3C2C92883600B460F8 /* HideBackActionViewController.swift in Sources */,
 				29C44C1C2C8AE5F600465596 /* LongTitleViewController.swift in Sources */,
 				29C44C1A2C89B55F00465596 /* ChangeBarActionViewController.swift in Sources */,
 				29C44C162C89AF6900465596 /* TitleTextAttributesViewController.swift in Sources */,

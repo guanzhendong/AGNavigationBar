@@ -2,38 +2,87 @@
 
 [![Version](https://img.shields.io/cocoapods/v/AGNavigationBar.svg?style=flat)](https://cocoapods.org/pods/AGNavigationBar)
 [![](https://img.shields.io/cocoapods/l/AGNavigationBar.svg?style=flat)](LICENSE)
-[![](https://img.shields.io/badge/support-iOS11%2B-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
+[![](https://img.shields.io/badge/support-iOS10%2B-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
 [![](https://img.shields.io/badge/language-Swift-f48041.svg?style=flat)](https://www.apple.com/)
 
 
 ## Screenshot
 
-### Home
-<img src="./Screenshot/1.png" alt="1" style="zoom:25%;" />
+### Demo
+![1](./Screenshot/1.png)
 
 ### BackgroundColor
 
-<img src="./Screenshot/2.png" alt="2" style="zoom:25%;" />
+```swift
+navBar.barTintColor = .green
+```
+
+![2](./Screenshot/2.png)
 
 ### BackgroundImage
 
-<img src="./Screenshot/3.png" alt="3" style="zoom:25%;" />
+```swift
+AGNavigationBar.Config.backgroundImage = UIImage(named: "bg")
+```
+
+![3](./Screenshot/3.png)
 
 ### AttributesTitle
 
-<img src="./Screenshot/4.png" alt="4" style="zoom:25%;" />
+```swift
+navBar.titleTextAttributes = [
+    .foregroundColor: UIColor.blue,
+    .font: UIFont.systemFont(ofSize: 26, weight: .medium)
+]
+```
 
-### BarAction
-
-<img src="./Screenshot/5.png" alt="5" style="zoom:25%;" />
-
-### ChangeAction
-
-![7](./Screenshot/7.gif)
+![4](./Screenshot/4.png)
 
 ### LongTitle
 
-<img src="./Screenshot/6.png" alt="6" style="zoom:25%;" />
+No additional setup required
+
+![6](./Screenshot/6.png)
+
+### BarAction
+
+```swift
+navBar.addAction(AGNavigationBarAction(title: "保存", position: .right))
+navBar.addAction(AGNavigationBarAction(title: "朋友圈", position: .right, handler: { _ in
+    print("朋友圈")
+}))
+navBar.addAction(AGNavigationBarAction(title: "关闭", position: .left, handler: { _ in
+}))
+
+navBar.actionTintColor = .yellow
+```
+
+![5](./Screenshot/5.png)
+
+### ChangeAction
+
+```swift
+navBar.addAction(AGNavigationBarAction(title: "保存", position: .right, handler: { action in
+    action.title = "😁"
+}))
+navBar.addAction(AGNavigationBarAction(title: "朋友圈", position: .right, handler: { action in
+    print("朋友圈")
+    action.isHidden = true
+}))
+navBar.addAction(AGNavigationBarAction(title: "关闭", position: .left, handler: { action in
+    action.isEnabled = false
+}))
+```
+
+![7](./Screenshot/7.gif)
+
+### HideBackAction
+
+```
+navBar.isBackHidden = true
+```
+
+![9](./Screenshot/9.png)
 
 ### ChangeAlpha
 
@@ -45,14 +94,22 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+- iOS 10.0
+- Swift 5.0
+
 ## Installation
 
-AGNavigationBar is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### CocoaPods
+
+AGNavigationBar is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'AGNavigationBar'
 ```
+
+### Manual
+
+Drop the swift files  [AGNavigationBar.swift](AGNavigationBar/Classes/AGNavigationBar.swift)  into your project.
 
 ## Usage
 

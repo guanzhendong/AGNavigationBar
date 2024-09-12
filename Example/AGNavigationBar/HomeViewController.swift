@@ -10,14 +10,22 @@ import UIKit
 
 class HomeViewController: UITableViewController {
     
+    var headerData = [
+        "背景",
+        "标题",
+        "按钮",
+        "透明度",
+    ]
+    
     var tableData = [
-        "设置背景色",
-        "设置背景图片",
-        "设置富文本标题",
-        "设置导航按钮",
-        "改变导航按钮（标题、图片、是否可用、是否隐藏）",
-        "设置超长的标题",
-        "设置颜色透明度（跟随滚动）",
+        ["设置背景色",
+         "设置背景图片",],
+        ["设置富文本标题",
+         "设置超长的标题",],
+        ["设置导航按钮",
+         "改变导航按钮（标题、图片、是否可用、是否隐藏）",
+         "隐藏返回按钮",],
+        ["设置颜色透明度（跟随滚动）",],
     ]
     
 
@@ -38,19 +46,19 @@ class HomeViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return headerData.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return tableData.count
+        return tableData[section].count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = tableData[indexPath.row]
+        cell.textLabel?.text = tableData[indexPath.section][indexPath.row]
         cell.textLabel?.numberOfLines = 0
 
         return cell
@@ -59,26 +67,53 @@ class HomeViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        switch indexPath.row {
+        switch indexPath.section {
         case 0:
-            navigationController?.pushViewController(BackgroundColorViewController(), animated: true)
+            switch indexPath.row {
+            case 0:
+                navigationController?.pushViewController(BackgroundColorViewController(), animated: true)
+            case 1:
+                navigationController?.pushViewController(BackgroundImageViewController(), animated: true)
+            default:
+                break
+            }
         case 1:
-            navigationController?.pushViewController(BackgroundImageViewController(), animated: true)
+            switch indexPath.row {
+            case 0:
+                navigationController?.pushViewController(TitleTextAttributesViewController(), animated: true)
+            case 1:
+                navigationController?.pushViewController(LongTitleViewController(), animated: true)
+            default:
+                break
+            }
         case 2:
-            navigationController?.pushViewController(TitleTextAttributesViewController(), animated: true)
+            switch indexPath.row {
+            case 0:
+                navigationController?.pushViewController(BarActionViewController(), animated: true)
+            case 1:
+                navigationController?.pushViewController(ChangeBarActionViewController(), animated: true)
+            case 2:
+                navigationController?.pushViewController(HideBackActionViewController(), animated: true)
+            default:
+                break
+            }
         case 3:
-            navigationController?.pushViewController(BarActionViewController(), animated: true)
-        case 4:
-            navigationController?.pushViewController(ChangeBarActionViewController(), animated: true)
-        case 5:
-            navigationController?.pushViewController(LongTitleViewController(), animated: true)
-        case 6:
-            navigationController?.pushViewController(ChangeAlphaViewController(), animated: true)
+            switch indexPath.row {
+            case 0:
+                navigationController?.pushViewController(ChangeAlphaViewController(), animated: true)
+            default:
+                break
+            }
         default:
             break
         }
         
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        headerData[section]
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
