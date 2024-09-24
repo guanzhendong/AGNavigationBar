@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "AGNavigationBar",
+    platforms: [.iOS(.v10)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -20,5 +21,6 @@ let package = Package(
         .testTarget(
             name: "AGNavigationBarTests",
             dependencies: ["AGNavigationBar"]),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )
