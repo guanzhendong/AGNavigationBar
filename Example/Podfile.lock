@@ -1,5 +1,5 @@
 PODS:
-  - AGNavigationBar (0.1.2)
+  - AGNavigationBar (0.1.3)
 
 DEPENDENCIES:
   - AGNavigationBar (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AGNavigationBar: a80a3f3332e9e6bf5615a54c7c1bec380ee30969
+  AGNavigationBar: eac449f449d02f276e77a8276471a7464d118611
 
 PODFILE CHECKSUM: 43f764bd08f245c86f7d9c238b9b4cb9974b881f
 
