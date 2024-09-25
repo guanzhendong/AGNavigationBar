@@ -99,6 +99,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### Swift Package Manager
+
+Add the following as a dependency to your `Package.swift`:
+
+```swift
+.package(url: "https://github.com/guanzhendong/AGNavigationBar", .upToNextMajor(from: "0.1.3"))
+```
+
 ### CocoaPods
 
 AGNavigationBar is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
