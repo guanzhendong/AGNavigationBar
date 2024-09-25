@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AGNavigationBar'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'A fully customized navigation bar, using like UINavigationBar.'
 
 #  s.description      = <<-DESC
