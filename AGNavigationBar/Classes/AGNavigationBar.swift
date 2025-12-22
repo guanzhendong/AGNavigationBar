@@ -117,6 +117,9 @@ extension AGNavigationBar {
             .foregroundColor: UIColor.white,
             .font: UIFont.systemFont(ofSize: 18, weight: .medium)
         ]
+        
+        /// Enable blur effect for NavigationBar, default is true
+        public static var enableBlurEffect: Bool = true
     }
 }
 
@@ -143,7 +146,11 @@ public class AGNavigationBar: UIView {
     /// Background color for NavigationBar
     public var barTintColor: UIColor? {
         didSet {
-            visualEffectView.contentView.backgroundColor = barTintColor
+            if enableBlurEffect {
+                visualEffectView.contentView.backgroundColor = barTintColor
+            } else {
+                backgroundColor = barTintColor
+            }
         }
     }
     
@@ -169,6 +176,13 @@ public class AGNavigationBar: UIView {
             }
             let action = actions[0]
             action.isHidden = true
+        }
+    }
+    
+    /// Enable blur effect for NavigationBar, default is Config.enableBlurEffect
+    public var enableBlurEffect: Bool = Config.enableBlurEffect {
+        didSet {
+            visualEffectView.isHidden = !enableBlurEffect
         }
     }
     
@@ -254,8 +268,10 @@ public class AGNavigationBar: UIView {
         
         if let _ = Config.backgroundImage {
             addSubview(backgroundImageView)
-        } else {
+        } else if Config.enableBlurEffect {
             addSubview(visualEffectView)
+        } else {
+            backgroundColor = Config.barTintColor
         }
         if let _ = Config.shadowImage {
             addSubview(shadowImageView)

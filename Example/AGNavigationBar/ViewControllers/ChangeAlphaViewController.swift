@@ -28,6 +28,7 @@ class ChangeAlphaViewController: BaseViewController {
         
         navBar.title = "颜色透明度（跟随滚动）"
         navBar.barTintColor = .blue
+        navBar.enableBlurEffect = false
         navBar.addAction(AGNavigationBarAction(title: "保存", position: .right, handler: { action in
         }))
     }
@@ -41,7 +42,9 @@ extension ChangeAlphaViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = UITableViewCell()
+        cell.backgroundColor = .green
+        return cell
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
